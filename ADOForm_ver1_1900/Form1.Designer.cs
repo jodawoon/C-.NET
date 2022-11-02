@@ -38,11 +38,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.DBGrid = new System.Windows.Forms.DataGridView();
             this.DAOOpenBtn = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.ccBtn = new System.Windows.Forms.Button();
+            this.DRBtn = new System.Windows.Forms.Button();
+            this.AppendBtn = new System.Windows.Forms.Button();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.DeleteBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.SearchBtn = new System.Windows.Forms.Button();
+            this.NameList = new System.Windows.Forms.ListBox();
+            this.UpBtn = new System.Windows.Forms.Button();
+            this.DownBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DBGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,6 +124,7 @@
             this.DBGrid.RowTemplate.Height = 23;
             this.DBGrid.Size = new System.Drawing.Size(368, 170);
             this.DBGrid.TabIndex = 8;
+            this.DBGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DBGrid_CellClick);
             // 
             // DAOOpenBtn
             // 
@@ -129,61 +136,125 @@
             this.DAOOpenBtn.UseVisualStyleBackColor = true;
             this.DAOOpenBtn.Click += new System.EventHandler(this.DAOOpenBtn_Click);
             // 
-            // button2
+            // ccBtn
             // 
-            this.button2.Location = new System.Drawing.Point(259, 389);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ccBtn.Location = new System.Drawing.Point(259, 389);
+            this.ccBtn.Name = "ccBtn";
+            this.ccBtn.Size = new System.Drawing.Size(75, 23);
+            this.ccBtn.TabIndex = 10;
+            this.ccBtn.Text = "ccBtn";
+            this.ccBtn.UseVisualStyleBackColor = true;
+            this.ccBtn.Click += new System.EventHandler(this.ccBtn_Click);
             // 
-            // button3
+            // DRBtn
             // 
-            this.button3.Location = new System.Drawing.Point(388, 389);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.DRBtn.Location = new System.Drawing.Point(388, 389);
+            this.DRBtn.Name = "DRBtn";
+            this.DRBtn.Size = new System.Drawing.Size(75, 23);
+            this.DRBtn.TabIndex = 11;
+            this.DRBtn.Text = "DRBtn";
+            this.DRBtn.UseVisualStyleBackColor = true;
+            this.DRBtn.Click += new System.EventHandler(this.DRBtn_Click);
             // 
-            // button4
+            // AppendBtn
             // 
-            this.button4.Location = new System.Drawing.Point(244, 118);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 12;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.AppendBtn.Location = new System.Drawing.Point(244, 118);
+            this.AppendBtn.Name = "AppendBtn";
+            this.AppendBtn.Size = new System.Drawing.Size(75, 23);
+            this.AppendBtn.TabIndex = 12;
+            this.AppendBtn.Text = "추가";
+            this.AppendBtn.UseVisualStyleBackColor = true;
+            this.AppendBtn.Click += new System.EventHandler(this.AppendBtn_Click);
             // 
-            // button5
+            // UpdateBtn
             // 
-            this.button5.Location = new System.Drawing.Point(334, 118);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 13;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Location = new System.Drawing.Point(334, 118);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(75, 23);
+            this.UpdateBtn.TabIndex = 13;
+            this.UpdateBtn.Text = "수정";
+            this.UpdateBtn.UseVisualStyleBackColor = true;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
-            // button6
+            // DeleteBtn
             // 
-            this.button6.Location = new System.Drawing.Point(415, 118);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 14;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Location = new System.Drawing.Point(415, 118);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(75, 23);
+            this.DeleteBtn.TabIndex = 14;
+            this.DeleteBtn.Text = "삭제";
+            this.DeleteBtn.UseVisualStyleBackColor = true;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(528, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 12);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "이름으로 찾기";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(530, 105);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(100, 21);
+            this.txtSearch.TabIndex = 16;
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.Location = new System.Drawing.Point(636, 103);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(75, 23);
+            this.SearchBtn.TabIndex = 17;
+            this.SearchBtn.Text = "찾기";
+            this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            // 
+            // NameList
+            // 
+            this.NameList.FormattingEnabled = true;
+            this.NameList.ItemHeight = 12;
+            this.NameList.Location = new System.Drawing.Point(530, 143);
+            this.NameList.Name = "NameList";
+            this.NameList.Size = new System.Drawing.Size(181, 160);
+            this.NameList.TabIndex = 18;
+            // 
+            // UpBtn
+            // 
+            this.UpBtn.Location = new System.Drawing.Point(530, 319);
+            this.UpBtn.Name = "UpBtn";
+            this.UpBtn.Size = new System.Drawing.Size(75, 23);
+            this.UpBtn.TabIndex = 19;
+            this.UpBtn.Text = "위로";
+            this.UpBtn.UseVisualStyleBackColor = true;
+            // 
+            // DownBtn
+            // 
+            this.DownBtn.Location = new System.Drawing.Point(636, 319);
+            this.DownBtn.Name = "DownBtn";
+            this.DownBtn.Size = new System.Drawing.Size(75, 23);
+            this.DownBtn.TabIndex = 20;
+            this.DownBtn.Text = "아래로";
+            this.DownBtn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 450);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(727, 450);
+            this.Controls.Add(this.DownBtn);
+            this.Controls.Add(this.UpBtn);
+            this.Controls.Add(this.NameList);
+            this.Controls.Add(this.SearchBtn);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.DeleteBtn);
+            this.Controls.Add(this.UpdateBtn);
+            this.Controls.Add(this.AppendBtn);
+            this.Controls.Add(this.DRBtn);
+            this.Controls.Add(this.ccBtn);
             this.Controls.Add(this.DAOOpenBtn);
             this.Controls.Add(this.DBGrid);
             this.Controls.Add(this.label4);
@@ -214,11 +285,17 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView DBGrid;
         private System.Windows.Forms.Button DAOOpenBtn;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button ccBtn;
+        private System.Windows.Forms.Button DRBtn;
+        private System.Windows.Forms.Button AppendBtn;
+        private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.Button DeleteBtn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.ListBox NameList;
+        private System.Windows.Forms.Button UpBtn;
+        private System.Windows.Forms.Button DownBtn;
     }
 }
 

@@ -1,0 +1,53 @@
+w10 -------------------------------------------
+DAOopen_Click 에서
+DataAdapter중
+DBAdapter.Fill(DS, "phone");
+//Fill 빈칸 문제 출제 
+
+ADO .NET 구성요소
+1.Connection -> 오라클의 연결정보를 담고있는 객체, 클래스
+2.Command -> 명령 sql쿼리문 정보를 담고있는 객체, 클래스
+3.DataReader-연결지향
+4.DataAdapter-비연결지향
+
+ExecuteReader() 메서드 <연결지향, 비연결지향 메서드가 다르므로 유념>
+
+ADOForm 코드 문제 복습할것
+
+ADOForm 코드 추가에 해당하는 부분에서
+DBAdapter.Update(DS, "Phone"0;
+에서 Update메서드 유념해라 이 메서드를 사용해야 dataSet->db에 추가할수있다.
+
+DataSet에서 변경된 코드를 복사본에서 원본으로 전송할때 사용하는 메서드와
+구조, 원리를 이해하자
+getChanges(DataRowState.Modified);
+이후 update메서드로 해결
+
+try문 시작할때 string 타입으로 선언된 문장 코드 2개가 중복되므로
+ver2에서는 DBopen해당하는 부분에서만 선언하고
+그외 반복되는 부분은 Form1 생성자에 DBopen을 호출하도록 작성한다.
+
+QNA.
+1.Fill()은 oracle 원본 테이블의 복사본인가? clear
+2.Update()는 DataSet -> 원본 테이블에 저장하기 위한 작업인것인가? clear
+3.업데이트버튼에서 그리드 CellClick을 설정하지 않으면
+	인스턴스 오류가 난다. 그이유는 무엇을 수정할건지 알아야하는데
+	단순 선언만하고 실행하면 무엇을 선택하여 수정할건지 알수가없어 인스턴스 오류가 난다.
+	clear	
+
+4.업에이트 버튼을 클릭할때 멤버변수 SlectedRowIndex에 임시 저장을 한후 해당 변수에 저장 된
+	데이터를 넘겨준다.
+	여기서 드는 의문 SelectedRowIndex를 선언하지않고 
+	일일히 윈폼 객체 name을 전달 해도 가능한가?
+
+
+
+
+
+
+
+
+
+
+
+

@@ -22,3 +22,16 @@ C:\C#Proj\ADOForm_ver1_1900\obj\Debug\ADOForm_ver1_1900.csproj.CoreCompileInputs
 C:\C#Proj\ADOForm_ver1_1900\obj\Debug\ADOForm_ver1_1900.csproj.CopyComplete
 C:\C#Proj\ADOForm_ver1_1900\obj\Debug\ADOForm_ver1_1900.exe
 C:\C#Proj\ADOForm_ver1_1900\obj\Debug\ADOForm_ver1_1900.pdb
+C:\C-.NET\ADOForm_ver1_1900\bin\Debug\ADOForm_ver1_1900.exe.config
+C:\C-.NET\ADOForm_ver1_1900\bin\Debug\ADOForm_ver1_1900.exe
+C:\C-.NET\ADOForm_ver1_1900\bin\Debug\ADOForm_ver1_1900.pdb
+C:\C-.NET\ADOForm_ver1_1900\bin\Debug\Oracle.DataAccess.dll
+C:\C-.NET\ADOForm_ver1_1900\obj\Debug\ADOForm_ver1_1900.csprojAssemblyReference.cache
+C:\C-.NET\ADOForm_ver1_1900\obj\Debug\ADOForm_ver1_1900.Form1.resources
+C:\C-.NET\ADOForm_ver1_1900\obj\Debug\ADOForm_ver1_1900.Properties.Resources.resources
+C:\C-.NET\ADOForm_ver1_1900\obj\Debug\ADOForm_ver1_1900.csproj.GenerateResource.cache
+C:\C-.NET\ADOForm_ver1_1900\obj\Debug\ADOForm_ver1_1900.csproj.CoreCompileInputs.cache
+C:\C-.NET\ADOForm_ver1_1900\obj\Debug\ADOForm_ver1_1900.csproj.CopyComplete
+C:\C-.NET\ADOForm_ver1_1900\obj\Debug\ADOForm_ver1_1900.exe
+C:\C-.NET\ADOForm_ver1_1900\obj\Debug\ADOForm_ver1_1900.pdb
+C:\C-.NET\ADOForm_ver1_1900\bin\Debug\Oracle.Database.Extensions.dll
